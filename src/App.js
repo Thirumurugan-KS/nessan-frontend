@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router , Route , Routes } from 'react-router-dom'
+import HeaderComponent from './components/HeaderComponent';
+import HomePage from './screens/HomePage';
+import FooterComponent from './components/FooterComponent';
+import ProductPage from './screens/ProductPage';
+import GenericNotFound from './components/GenericNotFound';
+import AddScreen from './screens/AddScreen';
+import DeleteScreen from './screens/DeleteScreen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <HeaderComponent/>
+    <Routes>
+    <Route path="/" element={<HomePage/>}/>
+    <Route path="/product/:id" element={<ProductPage/>}/>
+    <Route path="/yogesh/product/add" element={<AddScreen/>}/>
+    <Route path="/yogesh/product/delete" element={<DeleteScreen/>}/>
+    <Route path="*" element={<GenericNotFound/>} />
+    </Routes>
+    <FooterComponent/>
+    </Router>
   );
 }
 
