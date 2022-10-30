@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { MetaTags } from 'react-meta-tags'
 import DeleteCard from '../components/DeleteCard'
+
 
 const DeleteScreen = () => {
     let [products , setProducts ] = useState([])
@@ -18,6 +20,9 @@ const DeleteScreen = () => {
     
       return (
         products && <div className='home-page'>
+        <MetaTags>
+            <title>Delete Page</title>
+          </MetaTags>
         <Container fluid>
         <Row className='xs-12'>
         {products && products.map(product => (

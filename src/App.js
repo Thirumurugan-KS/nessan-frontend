@@ -7,6 +7,7 @@ import ProductPage from './screens/ProductPage';
 import GenericNotFound from './components/GenericNotFound';
 import AddScreen from './screens/AddScreen';
 import DeleteScreen from './screens/DeleteScreen';
+import LoginScreen from './screens/LoginScreen';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
     <Routes>
     <Route path="/" element={<HomePage/>}/>
     <Route path="/product/:id" element={<ProductPage/>}/>
-    <Route path="/yogesh/product/add" element={<AddScreen/>}/>
-    <Route path="/yogesh/product/delete" element={<DeleteScreen/>}/>
+    <Route path="/product/add" element={<AddScreen/>}/>
+    <Route path="/product/delete" element={<DeleteScreen/>}/>
+    <Route path="login" element={<LoginScreen/>}/>
     <Route path="*" element={<GenericNotFound/>} />
     </Routes>
     <FooterComponent/>

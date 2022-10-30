@@ -17,7 +17,7 @@ footer{
   text-align: center;
 }
 
-.home-page , .product-page , .Not-found , .file-upload{
+.home-page , .product-page , .Not-found , .file-upload , .login-page{
   min-height: 88vh;
   padding-left: 5px;
   padding-right: 5px;
